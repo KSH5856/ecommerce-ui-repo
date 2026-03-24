@@ -1,4 +1,9 @@
-.description{
-    color: var( --primary-color-orange);
-    font-weight: 500;
+.description {
+  color: var(--primary-color-orange);
+  font-weight: 500;
+}
+
+.img-container:hover {
+  transform: scale(0.98);
+  transition: all 1s ease;
 }
