@@ -1,5 +1,6 @@
 import Image from "next/image";
 import style from "./home.module.css";
+import { Card } from "../ui/card/card";
 
 export const Home = () => {
   return (
@@ -32,7 +33,7 @@ export const Home = () => {
       <div>
         <h2>Browse Collections</h2>
         <div className="flex gap-6 h-200 mt-4">
-          <div className={`${style['img-container']} relative h-full w-2/3`}>
+          <div className={`${style["img-container"]} relative h-full w-2/3`}>
             <Image
               src="/images/desktop.png"
               className={`object-cover bg-top-left rounded-3xl object-center`}
@@ -48,7 +49,7 @@ export const Home = () => {
             </div>
           </div>
           <div className="h-full flex flex-col gap-y-6  w-1/3">
-            <div className={`relative h-1/2 ${style['img-container']}`}>
+            <div className={`relative h-1/2 ${style["img-container"]}`}>
               <Image
                 src="/images/coat.png"
                 className={`${style["img-container"]} rounded-2xl`}
@@ -60,7 +61,7 @@ export const Home = () => {
                 <span className="text-white font-bold text-2xl">Living</span>
               </div>
             </div>
-            <div className={`relative h-1/2 ${style['img-container']}`}>
+            <div className={`relative h-1/2 ${style["img-container"]}`}>
               <Image
                 src="/images/leaf.png"
                 className={`object-cover rounded-2xl`}
@@ -74,6 +75,50 @@ export const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Third Section */}
+      <div className="flex justify-between flex-wrap mt-10">
+        <Card
+          categoryType="ELECTRONICS"
+          cardConfig={{
+            height: "450px",
+            width: "320px",
+            imgPath: "/images/headphones.png",
+          }}
+          productName="Studio-Grade Audio"
+          price="$299.00"
+        />
+        <Card
+          categoryType="APPAREL"
+          cardConfig={{
+            height: "450px",
+            width: "320px",
+            imgPath: "/images/headphones.png",
+          }}
+          productName="Full-Grain Low Top"
+          price="$180.00"
+        />
+        <Card
+          categoryType="LIVING"
+          cardConfig={{
+            height: "450px",
+            width: "320px",
+            imgPath: "/images/headphones.png",
+          }}
+          productName="Artisan Ceramic Set"
+          price="$95.00"
+        />
+        <Card
+          categoryType="APPAREL"
+          cardConfig={{
+            height: "450px",
+            width: "320px",
+            imgPath: "/images/headphones.png",
+          }}
+          productName="Velocity Runner"
+          price="$120.00"
+        />
       </div>
     </div>
   );
