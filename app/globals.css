@@ -39,17 +39,24 @@
   h2 {
     color: var(--primary-selected-color-blue);
     font-weight: 700;
-    font-size: 1.5rem;
+    line-height: 2.5rem;
+    font-size: 2.25rem;
   }
 
   h3 {
-    color: var(--primary-nonselected-color-blue);
+    color: var(--primary-selected-color-blue);
+    font-weight: 700;
+    font-size: 1.5rem;
   }
 
-  h3:hover {
+  h4 {
+    color: var(--primary-selected-color-blue);
+    font-weight: 600;
+  }
+
+  h4:hover {
     color: var(--primary-selected-color-blue);
     text-decoration: underline;
     cursor: pointer;
-    font-weight: 500;
   }
 }
