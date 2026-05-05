@@ -132,7 +132,7 @@ export const Home = () => {
           and exclusive early access to drops.
         </p>
         <div className="h-full flex w-[70%]">
-          <input type="text" className="border-0 grow px-6 py-4 mx-4  h-full" placeholder="email@address.com" />
+          <input type="text" placeholder="email@address.com" />
           <button className="rounded-xl px-6 py-4">Subscribe</button>
         </div>
       </div>

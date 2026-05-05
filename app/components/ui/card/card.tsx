@@ -3,6 +3,7 @@ import Image from "next/image";
 import Heart from "../../../../public/svg/heart.svg";
 import style from "./card.module.css";
 import { useState } from "react";
+import { RenderSVG } from "../RenderSVG/renderSvg";
 
 type CardProps = {
   cardConfig: {
@@ -24,8 +25,6 @@ export const Card = ({
   // Is liked will be controlled by api in future but for now we will use state to control the like functionality
   const [isLiked, setIsLiked] = useState(false);
   const heartCss = {
-    width: 20,
-    height: 20,
     fill: isLiked ? "var(--primary-selected-color-blue)" : "none",
   };
 
@@ -46,9 +45,16 @@ export const Card = ({
           fill
           className="object-cover rounded-xl"
         />
-        <span className={style.svgClass} onClick={islikeHandler}>
-          <Heart {...heartCss} />
-        </span>
+        <RenderSVG
+          iconName="heart"
+          onClick={islikeHandler}
+          className={`absolute top-2 right-2 p-1 ${style.svgClass}`}
+          iconConfig={{
+            iconClass: { ...heartCss },
+            height: "30px",
+            width: "30px",
+          }}
+        />
       </div>
 
       {/* Content of card */}
