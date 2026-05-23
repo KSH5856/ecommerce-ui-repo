@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import { Header } from "./components/header/header";
-import { Footer } from "./components/footer/footer";
+import { Header } from "../components/header/header";
+import { Footer } from "../components/footer/footer";
 
 export const metadata: Metadata = {
   title: "Ecommerce App",
@@ -14,10 +13,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`antialiased`}>
-      <body className="h-full">
-        {children}
-       </body>
-    </html>
+    <>
+      <Header />
+      {children}
+      <Footer />
+    </>
   );
 }
