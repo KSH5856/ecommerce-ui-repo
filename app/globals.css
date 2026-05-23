@@ -28,6 +28,13 @@
     background-color: var(--primary-nonselected-color-blue);
   }
 
+  label{
+    color: var(--text-color-gray);
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.6px;
+  }
+
   input{
     border: 0;
     flex-grow: 1;
@@ -35,6 +42,12 @@
     padding-block: 1rem;
     margin-inline: 1rem;
     height: 100%;
+    transition: all 0.2s ease-in-out;
+  }
+
+  input:focus {
+    outline: 2px solid var(--primary-selected-color-blue);
+    border-radius: 0.5rem;
   }
 
   h1 {

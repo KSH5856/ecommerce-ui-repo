@@ -1,14 +1,16 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-
 export function middleware(request: NextRequest) {
-  console.log(request.cookies.get("token")?.value);
+  const token = request.cookies.get("token")?.value;
 
-  if (request.cookies.get("token")?.value === undefined) {
-    console.log("No token found, redirecting to login page.");
+  if (!token && request.nextUrl.pathname !== "/login") {
     return NextResponse.redirect(new URL("/login", request.url));
   }
 
   return NextResponse.next();
 }
+
+export const config = {
+  matcher: ["/ecommerce/:path*", "/login/:path*"],
+};
