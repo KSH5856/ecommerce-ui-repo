@@ -48,7 +48,7 @@ export const Card = ({
         <RenderSVG
           iconName="heart"
           onClick={islikeHandler}
-          className={`absolute top-2 right-2 p-1 ${style.svgClass}`}
+          className={`absolute top-2 right-2 p-1 overflow-hidden ${style.svgClass}`}
           iconConfig={{
             iconClass: { ...heartCss },
             height: "30px",

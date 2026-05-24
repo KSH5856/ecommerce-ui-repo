@@ -1,0 +1,8 @@
+.tab-panel{
+    margin-top: 2.5rem;
+}
+
+.inactive-tab{
+    background-color: white;
+    color: var(--primary-selected-color-blue);
+}
