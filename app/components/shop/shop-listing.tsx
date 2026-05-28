@@ -101,7 +101,7 @@ export const ShopListing = () => {
       </div>
 
       {/* Tab component based on category */}
-      <div className="w-[95%] my-10 m-auto p-4">
+      <div className="w-[90%] my-10 m-auto p-4">
         <Tabs tabs={tabOptions} initialActiveId={"allObjects"} />
       </div>
 
